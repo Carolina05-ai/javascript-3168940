@@ -1,10 +1,132 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#escenario {
+   position: relative;
+   width: 750px;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-image: url("fondo.jpg");
+    overflow: hidden;
+}
+
+#planta {
+    position: absolute;
+    bottom: 300px;
+    left: 170px;
+    width: 60px;
+}
+
+#planta2 {
+    position: absolute;
+    bottom: 150px;
+    left: 170px;
+    width: 60px;
+}
+
+#dama {
+    position: absolute;
+    bottom: 310px;
+    left: 720px;
+    width: 100px;
+}
+
+#damo {
+    position: absolute;
+    bottom: 150px;
+    left: 720px;
+    width: 100px;
+}
+
+#bola {
+    position: absolute;
+    bottom: 190px;
+    left: 185px;
+    width: 25px;
+}
+
+#bola2 {
+    position: absolute;
+    bottom: 340px;
+    left: 185px;
+    width: 25px;
+}
+
+#sool{
+    position: absolute;
+    top: 50px;
+    left: 240px;
+    width: 60px;
+    height: 60px;
+}
 
 
 
+#sool2 {
+    position: absolute;
+    top: 50px;
+    left: 610px;
+    width: 60px;
+    height: 60px;
+}
 
+#sool2 :hover {
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+#sool3 {
+    position: absolute;
+    top: 50px;
+    left: 360px;
+    width: 60px;
+    height: 60px;
+}
+
+#sool3 :hover { 
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+#sol {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+#soles {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0.308);
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: 80px;
+    height: 40px;
+}
+
+.disparo {
+  transition: left 0.05s linear;
+}
+
+.desaparecer {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
