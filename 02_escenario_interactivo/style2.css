@@ -6,6 +6,7 @@
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -178,4 +179,16 @@ img {
   0% { transform: translateY(0); opacity: 1;}
   50% { transform: translateY(-30px); opacity: 0.5; }
   100% { transform: translateY(0); opacity: 1;}
+}
+
+
+#fondo{
+  position: relative;
+  width: 750px;
+  height: 500px;
+  background-image: url("fondo2.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px; 
+  overflow: hidden;
 }
