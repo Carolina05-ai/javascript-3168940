@@ -7,9 +7,10 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
+  background-color: #d8f0c0;
+  gap: 80px;
+  padding: 50px 0;
 }
 
 #escenario {
@@ -22,7 +23,6 @@ body {
   border-radius: 10px;
   overflow: hidden;
 }
-
 
 #planta, #planta2 {
   position: absolute;
@@ -44,7 +44,6 @@ body {
   0%, 100% { transform: rotate(0deg); }
   50% { transform: rotate(-5deg); }
 }
-
 
 #dama, #damo {
   position: absolute;
@@ -80,44 +79,22 @@ body {
   100% { transform: translateX(-800px); }
 }
 
-
 #sool, #sool2, #sool3 {
   position: absolute;
   width: 60px;
   height: 60px;
   cursor: pointer;
-  animation: caer 3s ease-in-out forwards, flotarSuelo 3s 3s ease-in-out infinite;
 }
 
-
-#sool  { top: -80px; left: 240px; animation-delay: 0s, 3s; }
-#sool2 { top: -80px; left: 610px; animation-delay: 1s, 4s; }
-#sool3 { top: -80px; left: 360px; animation-delay: 2s, 5s; }
-
+#sool  { top: -80px; left: 240px; animation: caer 3s ease-in-out forwards; }
+#sool2 { top: -80px; left: 610px; animation: caer 3s 1s ease-in-out forwards; }
+#sool3 { top: -80px; left: 360px; animation: caer 3s 2s ease-in-out forwards; }
 
 @keyframes caer {
   0% { top: -80px; opacity: 0; transform: scale(0.8); }
   50% { opacity: 1; transform: scale(1); }
   100% { top: 380px; opacity: 1; transform: scale(1); }
 }
-
-
-@keyframes flotarSuelo {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px) scale(1.05); }
-}
-
-
-#sool:active, #sool2:active, #sool3:active {
-  animation: brillar 0.5s ease-in-out;
-}
-
-@keyframes brillar {
-  0% { filter: brightness(1); transform: scale(1); }
-  50% { filter: brightness(2); transform: scale(1.3); }
-  100% { filter: brightness(1); transform: scale(1); }
-}
-
 
 #bola, #bola2 {
   position: absolute;
@@ -165,12 +142,6 @@ body {
   font-weight: bold;
 }
 
-
-img {
-  user-select: none;
-  transition: transform 0.2s ease-in-out;
-}
-
 .saltar {
   animation: salto 0.5s ease forwards;
 }
@@ -181,14 +152,39 @@ img {
   100% { transform: translateY(0); opacity: 1;}
 }
 
-
-#fondo{
+/* ──────────────── ESCENARIO 2 ──────────────── */
+#escenario2 {
   position: relative;
   width: 750px;
   height: 500px;
   background-image: url("fondo2.jpg");
   background-position: center;
   background-size: cover;
-  border-radius: 10px; 
+  border-radius: 10px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding-top: 40px;
+  gap: 25px;
 }
+
+/* ──────────────── ESCENARIO 3 ──────────────── */
+#escenario3 {
+  position: relative;
+  width: 750px;
+  height: 500px;
+  background-image: url("fondo3.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding-top: 40px;
+  gap: 25px;
+}
+
