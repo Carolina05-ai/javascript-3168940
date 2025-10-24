@@ -152,7 +152,6 @@ body {
   100% { transform: translateY(0); opacity: 1;}
 }
 
-/* ──────────────── ESCENARIO 2 ──────────────── */
 #escenario2 {
   position: relative;
   width: 750px;
@@ -170,7 +169,72 @@ body {
   gap: 25px;
 }
 
-/* ──────────────── ESCENARIO 3 ──────────────── */
+#money{
+  position: absolute;
+  width: 100px;
+  height: 80px;
+  top: 110px;
+    left: 180px;
+}
+
+#money2{
+  position: absolute;
+  width: 100px;
+  height: 80px;
+  right: 150px;
+  top: 150px;
+}
+
+#money3{
+  position: absolute;
+  width: 100px;
+  height: 80px;
+  top: 170px;
+}
+
+#cubo{
+  position: absolute;
+  width: 70px;
+  height: 70px;
+}
+
+#cubo2{
+  position: absolute;
+  width: 70px;
+  height: 70px;
+}
+
+#gato{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 58%;
+}
+
+#moneyvolador {
+  position: absolute;
+  top: 10px;
+  right: 90px;
+  width: 50px;
+  height: 40px;
+}
+
+#volador {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 5px 10px;
+  border-radius: 10px;
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+
 #escenario3 {
   position: relative;
   width: 750px;
