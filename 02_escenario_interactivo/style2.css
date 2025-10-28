@@ -8,7 +8,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #d8f0c0;
   gap: 80px;
   padding: 50px 0;
 }
@@ -152,6 +151,9 @@ body {
   100% { transform: translateY(0); opacity: 1;}
 }
 
+
+/*escenario pirata*/
+/* ──────────────── ESCENARIO 2: BARCO PIRATA ──────────────── */
 #escenario2 {
   position: relative;
   width: 750px;
@@ -161,80 +163,121 @@ body {
   background-size: cover;
   border-radius: 10px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  padding-top: 40px;
-  gap: 25px;
 }
 
-#money{
+/* Contador de puntos */
+#puntos-pirata {
   position: absolute;
-  width: 100px;
-  height: 80px;
-  top: 110px;
-    left: 180px;
-}
-
-#money2{
-  position: absolute;
-  width: 100px;
-  height: 80px;
-  right: 150px;
-  top: 150px;
-}
-
-#money3{
-  position: absolute;
-  width: 100px;
-  height: 80px;
-  top: 170px;
-}
-
-#cubo{
-  position: absolute;
-  width: 70px;
-  height: 70px;
-}
-
-#cubo2{
-  position: absolute;
-  width: 70px;
-  height: 70px;
-}
-
-#gato{
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 58%;
-}
-
-#moneyvolador {
-  position: absolute;
-  top: 10px;
-  right: 90px;
-  width: 50px;
-  height: 40px;
-}
-
-#volador {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 20px;
   font-size: 24px;
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 6px 12px;
   border-radius: 10px;
-  width: 80px;
-  height: 40px;
-  text-align: center;
-  line-height: 30px;
   font-weight: bold;
 }
 
+/* ──────────────── FANTASMAS ──────────────── */
+.fantasma1,
+.fantasma2,
+.fantasma3 {
+  position: absolute;
+  width: 90px;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+}
 
+/* Ubicación individual (ajústalas como quieras) */
+.fantasma1 { top: 120px; left: 100px; }
+.fantasma2 { top: 230px; left: 380px; }
+.fantasma3 { top: 310px; left: 230px; }
+
+.fantasma1:hover,
+.fantasma2:hover,
+.fantasma3:hover {
+  transform: scale(1.05);
+}
+
+/* ──────────────── EFECTO HUMO ──────────────── */
+.humo {
+  position: absolute;
+  width: 120px;
+  opacity: 0;
+  animation: humo 0.6s ease forwards;
+}
+
+@keyframes humo {
+  0% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 0; transform: scale(1.4); }
+}
+
+/* ──────────────── RAYO ──────────────── */
+#rayo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 750px;
+  height: 500px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes relampago {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+
+#cofre {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.8s ease;
+  width: 120px;
+}
+
+#cofre.visible {
+  transform: translateX(-50%) scale(1);
+}
+
+@keyframes aparecerFantasma {
+  0% { opacity: 0; transform: scale(0.7); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+
+#mensaje-ganaste {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  font-weight: bold;
+  color: #fff8b5;
+  text-shadow: 0 0 20px #ffe600, 0 0 40px #ffef93, 0 0 60px #ffd900;
+  animation: brilloTexto 1s ease-in-out infinite alternate;
+  z-index: 20;
+}
+
+@keyframes brilloTexto {
+  from { text-shadow: 0 0 10px #ffe600; opacity: 0.9; }
+  to { text-shadow: 0 0 25px #fff79a; opacity: 1; }
+}
+
+#cofre.brillante {
+  animation: brilloCofre 1s ease-in-out infinite alternate;
+}
+
+@keyframes brilloCofre {
+  0% { filter: drop-shadow(0 0 10px gold) brightness(1.2); }
+  100% { filter: drop-shadow(0 0 25px yellow) brightness(1.5); }
+}
+
+
+
+/*juego 3*/
 #escenario3 {
   position: relative;
   width: 750px;
@@ -252,3 +295,73 @@ body {
   gap: 25px;
 }
 
+/*maquetacion contenedor*/
+.contenedor-juego {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px; 
+  position: relative;
+}
+
+
+.contenedor-principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  position: relative;
+}
+
+.flecha {
+  font-size: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.flecha:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.1);
+}
+
+.flecha-izquierda {
+  position: absolute;
+  left: -80px;
+}
+
+.flecha-derecha {
+  position: absolute;
+  right: -80px;
+}
+
+.barra-miniaturas {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.miniatura {
+  width: 90px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 8px;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+  border: 2px solid transparent;
+}
+
+.miniatura:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.miniatura.activa {
+  opacity: 1;
+  border-color: #4CAF50;
+}
