@@ -11,10 +11,10 @@
 <div class="contenedor-juego">
   <div class="contenedor-principal">
     
-    <button class="flecha flecha-izquierda">⇐</button>
+    <button class="retroceder">⇐</button>
 
  <!--  plantas vs zombies -->
-    <div id="escenario">
+    <div class="escena activo" id="escenario">
       <img id="sool" src="soles.png" alt="sol">
       <img id="sool2" src="soles - 2.png" alt="sol">
       <img id="sool3" src="soles - 3.png" alt="sol">
@@ -32,8 +32,8 @@
       <span id="soles">0</span>
     </div>
 
-<!-- Juego de barco -->
-<div id="escenario2" class="escenario">
+<!--juego 2-->
+<div class="escena activo" id="escenario2">
   <span id="puntos-pirata">0</span>
   <img id="rayo" src="rayo.png" alt="rayo">
   <img id="cofre" src="tesoro.png" alt="cofre del tesoro">
@@ -44,9 +44,15 @@
   <img class="fantasma3" src="fantasma3.png" alt="fantasma 3">
 </div>
 
+<!--juego 3-->
+<div class="escena activo" id="escenario3">
+  <span id="vidas"></span>
+  <img src="" alt="">
+  <img src="" alt="">
+  
+</div>
 
-
-   <button class="flecha flecha-derecha">⇒</button>
+   <button class="siguiente">⇒</button>
   </div>
 
 

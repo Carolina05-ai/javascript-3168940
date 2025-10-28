@@ -1,4 +1,4 @@
-/* * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -74,10 +74,7 @@ body {
     height: 60px;
 }
 
-#sool :hover {
-    transform: scale(1.1);
-    transition: transform 1s;
-}
+
 
 #sool2 {
     position: absolute;
@@ -132,4 +129,4 @@ body {
 .desaparecer {
   opacity: 0;
   transition: opacity 0.5s;
-} */
+}

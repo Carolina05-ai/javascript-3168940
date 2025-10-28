@@ -96,3 +96,32 @@ setInterval(() => {
   rayo.style.animation = 'relampago 0.4s ease';
   setTimeout(() => (rayo.style.animation = 'none'), 400);
 }, 4000);
+
+
+/*carrusel*/
+
+//1 variables
+const escenas = document.querySelectorAll(".escenas")
+const miniaturas = document.querySelectorAll(".miniaturas")
+const retroceder = document.querySelectorAll(".retroceder")
+const siguiente = document.querySelectorAll(".siguiente")
+let indice = 0
+
+console.log(escenas)
+console.log(miniaturas)
+console.log(retroceder)
+console.log(siguiente)
+
+//2 funciones
+function mostrarEscena(i){
+  //asigna la clase escena a la pantalla
+    for (let j = 0; j < escenas.length; j++) {
+      escenas[j].classList.remove("activo");
+    }
+
+    escenas[i].classList.add("activo")
+
+    indice = i
+}
+
+
