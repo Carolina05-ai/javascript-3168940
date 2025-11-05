@@ -1,4 +1,4 @@
-const sool = document.getElementById('sool');
+/* const sool = document.getElementById('sool');
 const sool2 = document.getElementById('sool2');
 const sool3 = document.getElementById('sool3');
 const dama = document.getElementById('dama');
@@ -60,11 +60,11 @@ function disparar(planta, bolaImg) {
     nuevaBola.style.position = "absolute";
     nuevaBola.style.width = "25px";
 
-    // Posiciones base
+   
     const plantaLeft = parseInt(window.getComputedStyle(planta).left);
     const plantaBottom = parseInt(window.getComputedStyle(planta).bottom);
 
-    // Ajuste para que salga justo desde la "boca" de la planta
+    
     nuevaBola.style.left = (plantaLeft + 50) + "px";
     nuevaBola.style.bottom = (plantaBottom + 35) + "px";
 
@@ -75,7 +75,7 @@ function disparar(planta, bolaImg) {
         pos += 8;
         nuevaBola.style.left = pos + "px";
 
-        // Colisión con zombies
+       
         [dama, damo].forEach(zombie => {
             const zb = zombie.getBoundingClientRect();
             const bb = nuevaBola.getBoundingClientRect();
@@ -96,4 +96,4 @@ function disparar(planta, bolaImg) {
 }
 
 planta.addEventListener("click", () => disparar(planta, bola));
-planta2.addEventListener("click", () => disparar(planta2, bola2));
+planta2.addEventListener("click", () => disparar(planta2, bola2)); */

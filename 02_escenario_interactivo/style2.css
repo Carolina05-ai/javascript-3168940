@@ -153,6 +153,7 @@ body {
 
 
 /*escenario pirata*/
+/* ──────────────── ESCENARIO 2: BARCO PIRATA ──────────────── */
 #escenario2 {
   position: relative;
   width: 750px;
@@ -164,6 +165,7 @@ body {
   overflow: hidden;
 }
 
+/* Contador de puntos */
 #puntos-pirata {
   position: absolute;
   top: 15px;
@@ -175,6 +177,7 @@ body {
   font-weight: bold;
 }
 
+/* ──────────────── FANTASMAS ──────────────── */
 .fantasma1,
 .fantasma2,
 .fantasma3 {
@@ -184,7 +187,7 @@ body {
   transition: opacity 0.3s, transform 0.3s;
 }
 
-
+/* Ubicación individual (ajústalas como quieras) */
 .fantasma1 { top: 120px; left: 100px; }
 .fantasma2 { top: 230px; left: 380px; }
 .fantasma3 { top: 310px; left: 230px; }
@@ -195,13 +198,27 @@ body {
   transform: scale(1.05);
 }
 
+/* ──────────────── EFECTO HUMO ──────────────── */
+.humo {
+  position: absolute;
+  width: 120px;
+  opacity: 0;
+  animation: humo 0.6s ease forwards;
+}
 
+@keyframes humo {
+  0% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 0; transform: scale(1.4); }
+}
+
+/* ──────────────── RAYO ──────────────── */
 #rayo {
   position: absolute;
-  top: -57px;
-  left: 140px;
-  width: 550px;
-  height:550px;
+  top: 0;
+  left: 0;
+  width: 750px;
+  height: 500px;
   opacity: 0;
   pointer-events: none;
 }
@@ -278,8 +295,6 @@ body {
   gap: 25px;
 }
 
-
-
 /*maquetacion contenedor*/
 .contenedor-juego {
   display: flex;
@@ -309,13 +324,17 @@ body {
   transition: background-color 0.3s, transform 0.3s;
 }
 
+.flecha:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.1);
+}
 
-.retroceder {
+.flecha-izquierda {
   position: absolute;
   left: -80px;
 }
 
-.siguiente {
+.flecha-derecha {
   position: absolute;
   right: -80px;
 }
@@ -337,9 +356,6 @@ body {
   border: 2px solid transparent;
 }
 
-.escena{display: none;}
-.activo{display: block;} 
-
 .miniatura:hover {
   opacity: 1;
   transform: scale(1.05);
@@ -348,4 +364,16 @@ body {
 .miniatura.activa {
   opacity: 1;
   border-color: #4CAF50;
+}
+
+.escenario {
+  display: none;
+  position: relative;
+  width: 750px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.escenario.activo {
+  display: block;
 }

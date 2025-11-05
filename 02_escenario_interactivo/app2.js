@@ -97,31 +97,37 @@ setInterval(() => {
   setTimeout(() => (rayo.style.animation = 'none'), 400);
 }, 4000);
 
+// Cambiar entre escenarios
+const escenarios = document.querySelectorAll('.escenario');
+const miniaturas = document.querySelectorAll('.miniatura');
+const flechaIzq = document.querySelector('.flecha-izquierda');
+const flechaDer = document.querySelector('.flecha-derecha');
+let indiceActual = 0;
 
-/*carrusel*/
-
-//1 variables
-const escenas = document.querySelectorAll(".escenas")
-const miniaturas = document.querySelectorAll(".miniaturas")
-const retroceder = document.querySelectorAll(".retroceder")
-const siguiente = document.querySelectorAll(".siguiente")
-let indice = 0
-
-console.log(escenas)
-console.log(miniaturas)
-console.log(retroceder)
-console.log(siguiente)
-
-//2 funciones
-function mostrarEscena(i){
-  //asigna la clase escena a la pantalla
-    for (let j = 0; j < escenas.length; j++) {
-      escenas[j].classList.remove("activo");
-    }
-
-    escenas[i].classList.add("activo")
-
-    indice = i
+function mostrarEscenario(indice) {
+  escenarios.forEach((esc, i) => {
+    esc.style.display = i === indice ? 'block' : 'none';
+  });
+  miniaturas.forEach((mini, i) => {
+    mini.classList.toggle('activa', i === indice);
+  });
 }
 
+mostrarEscenario(indiceActual);
 
+flechaIzq.addEventListener('click', () => {
+  indiceActual = (indiceActual - 1 + escenarios.length) % escenarios.length;
+  mostrarEscenario(indiceActual);
+});
+
+flechaDer.addEventListener('click', () => {
+  indiceActual = (indiceActual + 1) % escenarios.length;
+  mostrarEscenario(indiceActual);
+});
+
+miniaturas.forEach((mini, i) => {
+  mini.addEventListener('click', () => {
+    indiceActual = i;
+    mostrarEscenario(indiceActual);
+  });
+});
