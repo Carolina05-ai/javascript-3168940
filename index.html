@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escenarios Interactivos</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+<div class="contenedor-juego">
+  <div class="contenedor-principal">
+    <button class="flecha flecha-izquierda">⇐</button>
+
+    <!-- Escenario 1: Plantas vs Zombies -->
+    <div id="escenario" class="escenario activo">
+      <img id="sool" src="soles.png" alt="sol">
+      <img id="sool2" src="soles - 2.png" alt="sol">
+      <img id="sool3" src="soles - 3.png" alt="sol">
+
+      <img id="dama" src="dama.png" alt="zombie dama">
+      <img id="damo" src="damo.png" alt="zombie damo">
+
+      <img id="bola" src="bola.png" alt="bola">
+      <img id="bola2" src="bola - 2.png" alt="bola 2">
+
+      <img id="planta" src="planta.png" alt="planta">
+      <img id="planta2" src="planta - 2.png" alt="planta 2">
+
+      <img id="sol" src="soles.png" alt="solecito">
+      <span id="soles">0</span>
+    </div>
+
+    <!-- Escenario 2: Barco Pirata -->
+    <div id="escenario2" class="escenario">
+      <span id="puntos-pirata">0</span>
+      <img id="rayo" src="rayo.png" alt="rayo">
+      <img id="cofre" src="tesoro.png" alt="cofre del tesoro">
+      <img class="fantasma1" src="fantasma1.png" alt="fantasma 1">
+      <img class="fantasma2" src="fantasma2.png" alt="fantasma 2">
+      <img class="fantasma3" src="fantasma3.png" alt="fantasma 3">
+    </div>
+
+    <!-- Escenario 3: Tesoro Final -->
+    <div id="escenario3" class="escenario">
+      <h2 style="color:white; text-shadow:0 0 10px black;">¡Has llegado al tesoro final!</h2>
+      <p style="color:white; text-shadow:0 0 10px black;">Encuentra el cofre escondido para completar la aventura.</p>
+      <img src="cofre.png" alt="Cofre final" style="width:150px; cursor:pointer;">
+    </div>
+
+    <button class="flecha flecha-derecha">⇒</button>
+  </div>
+
+  <div class="barra-miniaturas">
+    <img src="fondo.jpg" alt="Escenario 1" class="miniatura activa">
+    <img src="fondo2.jpg" alt="Escenario 2" class="miniatura">
+    <img src="fondo3.jpg" alt="Escenario 3" class="miniatura">
+  </div>
+</div>
+
+<script src="app2.js"></script>
+</body>
+</html>
