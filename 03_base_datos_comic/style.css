@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(3, 3, 80);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    backdrop-filter: blur(6px);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #00a8ff;
+    letter-spacing: 2px;
+}
+
+.nav a {
+    color: #658deb;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hero {
+    height: 75vh;
+    background: url(gatocomuneuropeo-97.jpeg) center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 50px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 10px 0;
+    max-width: 500px;
+}
+
+.hero button {
+    border: none;
+    padding: 14px 32px;
+    border-radius: 4px;
+    color: rgb(3, 3, 80);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.row {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.carrusel {
+    display: flex;
+    overflow-x:auto;
+    gap: 12px;
+    scrollbar-width: none;
+}
+
+.carrusel img{
+    width: 220px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 6px;
+}
