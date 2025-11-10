@@ -8,29 +8,74 @@
 </head>
 <body>
      
-    <header>
-        <div class="logo">STREAM</div>
-        <nav class="nav">
-            <a href="#">inicio</a>
-            <a href="#">capitulos</a>
-            <a href="">Personajes</a>
-        </nav>
+    <header class="navbar">
+       <div class="logo">
+        <img src="ejemplo.jpg" alt="comic">
+       </div>
+
+       <nav class="menu">
+        <a href="#">Inicio</a>
+        <a href="#">Ver Comic</a>
+        <a href="#">Sinopsis</a>
+        <a href="#">Capitulos</a>
+       </nav>
+ 
+        <div class="buscador">
+            <input type="text" placeholder="Buscar">
+        </div>
     </header>
 
-    <section class="hero">
-        <h1>TITULO</h1>
-        <p>(descripcion)</p>
-        <button>Reproducir</button>
-    </section>
+   <section class="hero">
+    <img src="ejemplo.jpg" class="hero-img" alt="imgstory">
 
-    <section class="row">
-        <h2>Capitulos</h2>
-        <div class="carrusel">
-            <img src="gatocomuneuropeo-97.jpeg" alt="imgcap1">
-            <img src="gatocomuneuropeo-97.jpeg" alt="imgcap2">
-            <img src="gatocomuneuropeo-97.jpeg" alt="imgcap3">
+    <div class="hero-info">
+        <h1 class="comic-title">Huellas De Ritmo</h1>
+
+        <div class="hero-buttons">
+            <button class="btn">Ver Ahora</button>
+            <button class="btn btn-sec">Ver Trailer</button>
         </div>
-    </section>
+
+    </div>
+   </section>
+
+
+   <section class="detalle">
+    <div class="detalle-img">
+        <img src="ejemplo.jpg" alt="portada comic">
+    </div>
+
+    <div class="detalle-info">
+        <h2>Huellas De Ritmo</h2>
+        <p><strong>Numero de Capitulos:</strong>3</p>
+        <p><strong>Genero:</strong>Fantasia/Drama</p>
+        <p><strong>Sinopsis:</strong>Narra la historia de Isabel, una niña prodigiosa en el baile que vive...</p>
+        <p><strong>Autores:</strong>Carolina, Jimena, Valentina</p>
+        <p><strong>Año:</strong>2025</p>
+    </div>
+   </section>
+
+
+   <section class="galeria">
+        <h2>Capitulos</h2>
+
+        <div class="cards">
+            <div class="card">
+                <img src="ejemplo.jpg" alt="capitulo-1">
+                <h3>Capitulo 1</h3>
+            </div>
+
+        <div class="card">
+            <img src="ejemplo.jpg" alt="capitulo-2">
+            <h3>Capitulo 2</h3>
+        </div>   
+        
+        <div class="card">
+            <img src="ejemplo.jpg" alt="capitulo-3">
+            <h3>Capitulo 3</h3>
+        </div>
+      </div>
+   </section>
 
 
     <script src="app.js"></script>
