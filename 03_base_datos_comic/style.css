@@ -142,3 +142,33 @@ body{
     border-radius: 10px;
     margin-bottom: 10px;
 }
+
+.personajes{
+    width: 90%;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.personajes h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.cartoon{
+   display: flex;
+   gap: 30px;
+}
+
+.toons{
+    width: 200px;
+    background-color: #141418;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.toons img{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
