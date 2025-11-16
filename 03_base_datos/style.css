@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0d0d0f;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #0a0a0c;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.logo img{
+    width: 110px;
+}
+
+.menu{
+    margin-left: 40px;
+    display: flex;
+    gap: 25px;
+}
+
+.menu a{
+    color: #dadada;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.menu a:hover{
+    color: wheat;
+}
+
+.buscador input{
+    margin-left: 50px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.hero {
+    margin-top: 90px;
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.hero-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(65%);
+}
+
+.hero-info{
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+}
+
+.comic-title{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero-buttons .btn{
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn-sec{
+    background-color: rgb(225, 225, 225, 0.4);
+    color: white;
+}
+
+.detalle{
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    gap: 40px;
+}
+
+.detalle-img img {
+    width: 280px;
+    border-radius: 10px;
+}
+
+.detalle-info h2{
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.detalle-info p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.galeria{
+    width: 90%;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.galeria h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.cards{
+   display: flex;
+   gap: 30px;
+}
+
+.card{
+    width: 200px;
+    background-color: #141418;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.personajes{
+    width: 90%;
+    margin: auto;
+    margin-top: 60px;
+}
+
+.personajes h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.cartoon{
+   display: flex;
+   gap: 30px;
+}
+
+.toons{
+    width: 200px;
+    background-color: #141418;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.toons img{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/*CELULAR*/
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .buscador input {
+        width: 120px;
+        margin-left: 10px;
+    }
+
+    .hero {
+        height: 300px;
+    }
+
+    .comic-title {
+        font-size: 28px;
+    }
+
+    .hero-info {
+        left: 20px;
+        bottom: 25px;
+    }
+
+    .detalle {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .detalle-img img {
+        width: 80%;
+        margin: auto;
+    }
+
+    .cartoon,
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .toons,
+    .card {
+        width: 80%;
+    }
+}
+
+/*TABLETS*/
+
+@media (min-width: 600px) and (max-width: 992px) {
+
+    .navbar {
+        padding: 15px 30px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .hero {
+        height: 380px;
+    }
+
+    .comic-title {
+        font-size: 35px;
+    }
+
+    .detalle {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .detalle-img img {
+        width: 320px;
+    }
+
+    .cartoon,
+    .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .toons,
+    .card {
+        width: 180px;
+    }
+}
