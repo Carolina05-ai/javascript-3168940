@@ -172,3 +172,96 @@ body{
     border-radius: 10px;
     margin-bottom: 10px;
 }
+
+/*CELULAR*/
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .buscador input {
+        width: 120px;
+        margin-left: 10px;
+    }
+
+    .hero {
+        height: 300px;
+    }
+
+    .comic-title {
+        font-size: 28px;
+    }
+
+    .hero-info {
+        left: 20px;
+        bottom: 25px;
+    }
+
+    .detalle {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .detalle-img img {
+        width: 80%;
+        margin: auto;
+    }
+
+    .cartoon,
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .toons,
+    .card {
+        width: 80%;
+    }
+}
+
+/*TABLETS*/
+
+@media (min-width: 600px) and (max-width: 992px) {
+
+    .navbar {
+        padding: 15px 30px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .hero {
+        height: 380px;
+    }
+
+    .comic-title {
+        font-size: 35px;
+    }
+
+    .detalle {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .detalle-img img {
+        width: 320px;
+    }
+
+    .cartoon,
+    .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .toons,
+    .card {
+        width: 180px;
+    }
+}
