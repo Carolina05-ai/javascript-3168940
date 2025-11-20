@@ -8,7 +8,7 @@ let comic = {
     {
       "imagen": "shakira.png",
       "id": "1",
-      "nombre": "Isabel",
+      "nombre": "Shakira/Isabel",
       "edad": "10",
       "descripcion": "Isabel es una niña de 10 años, con una energía inagotable y una pasión desbordante por el baile. Su talento innato la convierte en la mejor bailarina de su aldea, y su espíritu alegre y optimista inspira a todos a su alrededor."
     },

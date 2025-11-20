@@ -1,23 +1,24 @@
-const infoComic = document.querySelector(".info-comic");
-const cardPersonajes = document.querySelector(".card-personajes");
-console.log(comic.personajes);
-console.log(infoComic);
+const galeria = document.querySelector('.personajes');
 
-infoComic.innerHTML = 
-`
-    <h1>${comic.nombreComic}</h1>
-    <p>${comic.sinopsis}</p>
-    <p>${comic.genero}</p>
-`
+console.log(galeria);
+
+galeria.innerHTML = '';
+
 comic.personajes.forEach(char => {
-  const div = document.createElement("div");
-  div.classList.add("personajes");
-  div.innerHTML = 
-`
-  <img src="${char.imagen}" alt="">
-    <p>${char.nombre}</p>
-    <p>${char.descripcion}</p>
-`
 
-cardPersonajes.appendChild(div)
-});
+  const div = document.createElement('div');
+  div.classList.add('card');
+  div.innerHTML = `
+  
+  <img src="${char.imagen}" alt="${char.nombre}">
+  <h3>${char.nombre}</h3>
+  <p>${char.edad}</p>
+  <p>${char.descripcion}</p>
+
+  `;
+
+  galeria.appendChild(div);
+
+})
+
+ 
