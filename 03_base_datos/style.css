@@ -22,7 +22,7 @@ body{
 }
 
 .logo img{
-    width: 110px;
+    width: 50px;
 }
 
 .menu{
@@ -264,4 +264,44 @@ body{
     .card {
         width: 180px;
     }
+}
+
+.lista-personajes {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.lista-caps {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cap-card {
+    width: 200px;
+    background-color: #141418;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.cap-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.capitulos {
+    width: 90%;
+    margin: auto;
+    margin-top: 60px;
+}
+    
+.capitulos h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: left;
 }
