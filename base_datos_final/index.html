@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Huellas de Ritmo - SHARUM</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header id="main-header">
+    <div class="header-left">
+      <img src="logo (1).png" alt="Logo" class="logo-img" />
+      <span class="logo-text">SHARUM</span>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="capitulos.html?list">Capítulos</a></li>
+        <li><a href="personajes.html?list">Personajes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="hero-section">
+      <div class="hero-carousel" id="hero-carousel"></div>
+      
+      <button class="carousel-prev" aria-label="Anterior"></button>
+      <button class="carousel-next" aria-label="Siguiente"></button>
+      <div class="carousel-dots" id="hero-dots"></div>
+
+      <div class="hero-details fade-in">
+        <h1 id="hero-title">Cargando...</h1>
+        <p id="hero-description">Cargando...</p>
+        <div class="hero-actions">
+          <button class="btn-primary">Ver Ahora</button>
+          <button class="btn-secondary">Más Información</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-row fade-in delay-1">
+      <h2>Personajes Principales</h2>
+      <div class="carousel" id="characters-container"></div>
+    </section>
+
+    <section class="content-row fade-in delay-2">
+      <h2>Capítulos</h2>
+      <div class="carousel" id="chapters-container"></div>
+    </section>
+  </main>
+
+  <div class="bg-overlay"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
